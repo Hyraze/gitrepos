@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
-  "start_url": "https://gitrepo.now.sh/trending",
+  "start_url": "https://gitrepos.now.sh/trending",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
@@ -56,9 +56,9 @@
       "purpose": "maskable any"
     }
   ],
-  "url" : "https://gitrepo.now.sh",
+  "url" : "https://gitrepos.now.sh",
 	"lang" : "",
 	"screenshots" : [],
-	"description" : "Get the latest trending Repos from Github",
+	"description" : "Get the latest trending Repos and Devs from Github",
 	"generated" : ""
 }
