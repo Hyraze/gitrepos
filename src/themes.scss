@@ -1,0 +1,39 @@
+@import '~@nebular/theme/styles/theming';
+@import '~@nebular/theme/styles/themes/dark';
+@import '~@nebular/theme/styles/themes/default';
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+$nb-enable-css-custom-properties: true;
+
+$nb-themes: nb-register-theme((
+  color-primary-100: #faf7ff, // <- new primary color
+  color-primary-200: #ece3ff,
+  color-primary-300: #d5bfff,
+  color-primary-400: #b18aff,
+  color-primary-500: #a16eff,
+  color-primary-600: #7b51db,
+  color-primary-700: #5a37b8,
+  color-primary-800: #3e2494,
+  color-primary-900: #29157a,
+  font-family-primary: unquote('Space Mono,monospace'),
+  font-family-secondary: font-family-primary,
+   text-basic-color: color-primary-600,
+  text-disabled-color: color-primary-600,
+), default, default);
+
+$nb-themes: nb-register-theme((
+  color-primary-100: #faf7ff, // <- new primary color
+  color-primary-200: #ece3ff,
+  color-primary-300: #d5bfff,
+  color-primary-400: #b18aff,
+  color-primary-500: #a16eff,
+  color-primary-600: #7b51db,
+  color-primary-700: #5a37b8,
+  color-primary-800: #3e2494,
+  color-primary-900: #29157a,
+  link-text-color: color-primary-300,
+   text-basic-color: color-primary-300,
+  text-disabled-color: color-primary-300,
+  font-family-primary: unquote('Space Mono,monospace'),
+  font-family-secondary: font-family-primary,
+), dark, dark);

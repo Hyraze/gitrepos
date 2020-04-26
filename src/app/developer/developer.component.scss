@@ -1,0 +1,149 @@
+@import "../../themes";
+
+.container {
+  display: block;
+  width: 100%;
+}
+
+.card {
+  float: left;
+  padding-left:35px;
+  padding-right:-35px;
+  /*setting width for each and every card element as well as -10px for removing the margin width for 5 elements*/;
+  width: calc( 100% / 2 - 10px);
+}
+.des{
+  margin-bottom: max-content;
+}
+
+/*first element*/
+
+.container .card:first-child {
+  margin-left: 0;
+}
+
+
+/*last element of the first row*/
+
+.container .card:nth-child(5n) {
+  margin-right: 0;
+}
+
+
+/*first-element of the 2nd row*/
+
+.container .card:nth-child(5n+1) {
+  margin-left: 0;
+}
+
+
+/*last element*/
+
+.container .card:last-child {
+  margin-right: 0;
+}
+
+
+.card-row {
+  display: flex;
+  margin: 0 -0.5rem;
+  
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.filter {
+  margin-bottom: 2rem;
+  padding-left: 2.2em;
+}
+
+.language {
+  margin-right: 10px;
+}
+
+.repoName {
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+
+.repoName:first-letter {
+  text-transform: uppercase;
+}
+
+.avatar {
+  vertical-align: middle;
+  margin-right: 25px;
+  width: 100px;
+  border-radius: 20%;
+}
+
+.icon {
+  width: 1em;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
+.starCount {
+  display: inline-block;
+}
+.repoCard{
+  margin-right: 40px;
+  margin-left: -20px;
+
+  
+}
+.iconCount{
+  padding: 1em;
+  margin: 0;
+}
+
+.iconSpace{
+  padding: 0.2em;
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+.zoom{
+  transition: transform .2s;
+}
+.zoom:hover{
+  -ms-transform: scale(0.2); /* IE 9 */
+  -webkit-transform: scale(0.2); /* Safari 3-8 */
+  transform: scale(1.05);
+  
+
+}
+
+
+@media only screen and (max-width: 576px) {
+  .card {
+    max-width: 570px;
+    float: left;
+    margin: auto;
+    padding-left:35px;
+    width: calc( 100% / 1 - 10px);
+  }
+  .repoCard{
+    height: max-content;
+    margin-left: -35px;
+    margin-right: -10px;
+    
+  }
+  .filter {
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

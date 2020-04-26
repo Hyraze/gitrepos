@@ -1,0 +1,31 @@
+@import "../themes.scss";
+
+
+nb-layout-header {
+  position: relative;
+  display: block;
+}
+
+
+.sidebar-toggle {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2.5rem;
+  line-height: 1rem;
+  outline:none;
+}
+
+.sidebar-toggle-icon {
+  vertical-align: middle;
+  font-size: 1.75rem;
+  color: rgb(137, 148, 163);
+}
+.title {
+  font-size: 2.5em;
+  margin-left: 5px;
+  flex: 1;
+  font-family: nb-theme(font-family-primary);
+  display: inline-block;
+  color:color-primary-600; /*non-webkit fallback*/
+}
+

@@ -1,0 +1,33 @@
+<div class="header">
+  
+  <div class="filter">
+
+    <nb-select
+      class="since alignselect"
+      placeholder="Select Timespan"
+      [(selected)]="selectedSince"
+      [(ngModel)]="selectedSince"
+      (selectedChange)="onSinceSelected($event)"
+    >
+      <nb-option value="daily" class="daily">Daily</nb-option>
+      <nb-option value="weekly" class="weekly">Weekly</nb-option>
+      <nb-option value="monthly" class="monthly">Monthly</nb-option>
+    </nb-select>
+  </div>
+</div>
+<div class="container" *ngFor="let developer of developers">
+  <div class="card">
+  <a href="{{ developer.url }}">
+    <nb-card size="tiny" class="repoCard zoom">
+    <nb-card-body >
+      <a href="{{ developer.url }}"><img class="des" src="{{ developer.avatar }}" alt="avatar" class="avatar" /> </a>
+   </nb-card-body>
+     <nb-card-footer>
+        <a class="repoName" href="{{ developer.url }}"><strong>{{ developer.username }}</strong> |<br/> {{developer.name}} </a>
+  </nb-card-footer>
+  
+    </nb-card>
+  </a>
+  </div>
+</div>
+
