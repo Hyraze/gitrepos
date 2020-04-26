@@ -1,5 +1,10 @@
 @import "../themes.scss";
 
+@include nb-install-component {
+
+  background: nb-theme(background-basic-color);
+}
+
 
 nb-layout-header {
   position: relative;

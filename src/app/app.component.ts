@@ -54,7 +54,7 @@ export class AppComponent {
       this.themeService.changeTheme('default');
       this.icon = this.moon;
     } else {
-      this.themeService.changeTheme('dark');
+      this.themeService.changeTheme('cosmic');
       this.icon = this.sun;
     }
   }

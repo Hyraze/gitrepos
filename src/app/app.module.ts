@@ -44,7 +44,7 @@ import { environment } from '../environments/environment';
       meteor: true
     }),
     NgProgressHttpModule,
-    NbThemeModule.forRoot({ name: 'dark' }),
+    NbThemeModule.forRoot({ name: 'cosmic' }),
     NbLayoutModule,
     NbEvaIconsModule,
     NbSearchModule,

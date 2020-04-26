@@ -6,7 +6,6 @@ A PWA app providing Trending Repositories & Developers from GitHub, Gitlab & Hac
 
 
 
-
 ```python
 
 ```

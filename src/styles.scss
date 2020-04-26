@@ -5,4 +5,8 @@
 @include nb-install() {
   @include nb-theme-global();
 };
+@include nb-install-component {
+
+  background: nb-theme(background-basic-color-1);
+}
 /* You can add global styles to this file, and also import other style files */
