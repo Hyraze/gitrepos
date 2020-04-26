@@ -1,6 +1,6 @@
 # Gitrepos
 
-Trending repositories & Developers from GitHub, Gitlab & HackerNews 
+A PWA app providing Trending repositories & Developers from GitHub, Gitlab & HackerNews 
 
 
 
