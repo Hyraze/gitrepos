@@ -1,6 +1,6 @@
 # Gitrepos
 
-Trending repositories from GitHub, Gitlab & HackerNews 
+Trending repositories & Developers from GitHub, Gitlab & HackerNews 
 
 
 
