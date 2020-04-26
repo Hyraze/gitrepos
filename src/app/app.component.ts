@@ -42,10 +42,10 @@ export class AppComponent {
   ];
 
   toggle() {
-    this.sidebarService.toggle(true, 'right');
+    this.sidebarService.toggle(false, 'right');
      }
      collapseAll(){
-      this.sidebarService.toggle(true, 'right');
+      this.sidebarService.toggle(false, 'right');
 
      }
 

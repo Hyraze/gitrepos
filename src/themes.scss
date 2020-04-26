@@ -31,9 +31,11 @@ $nb-themes: nb-register-theme((
   color-primary-700: #5a37b8,
   color-primary-800: #3e2494,
   color-primary-900: #29157a,
+  color-primary-1000:#252481,
   link-text-color: color-primary-300,
    text-basic-color: color-primary-300,
   text-disabled-color: color-primary-300,
+  background-color: color-primary-1000,
   font-family-primary: unquote('Space Mono,monospace'),
   font-family-secondary: font-family-primary,
 ), dark, dark);
