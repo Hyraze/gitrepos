@@ -1,9 +1,9 @@
+<h1 align="center">Welcome to Gitrepos 👋</h1>
+<br />
 <div align="center">
   <img src="src/assets/icons/icon-512x512.png" alt="hero image" width="400"/>
 </div>
 <br />
-<h1 align="center">Gitrepos</h1>
-
 <p align="center">:octocat: A simple PWA app that returns Trending Repositories & Developers from GitHub, Gitlab & HackerNews.</p>
 
 [![E2E Test](https://github.com/Hyraze/gitrepos/workflows/E2E%20Test/badge.svg?branch=master)](https://github.com/Hyraze/gitrepos/workflows/E2E)
@@ -11,9 +11,9 @@
 [![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Hyraze/gitrepos/blob/master/LICENSE)
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg)](CODE_OF_CONDUCT.md)
 
+### 🏠 [Homepage](https://github.com/Hyraze/gitrepos#readme)
 
-
-
+### ✨ [Demo](https://gitrepos.now.sh/)
 
 
 ```python
@@ -22,7 +22,11 @@
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-Please make sure to update tests as appropriate. 
+Please make sure to update tests as appropriate.
+
+## Show your support
+Give a ⭐️ if this project helped you!
+
 ## Goals
 * [Future Goals](https://gist.githubusercontent.com/Hyraze/2eb4542b79fd73507c6011eff40e0034/raw/102fae0d55080cc353e77376c9a9cd0068608cda/gitrepogoals.md)
 
