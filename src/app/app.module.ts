@@ -25,7 +25,6 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
 import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
@@ -62,7 +61,6 @@ import { NgxSpinnerModule } from "ngx-spinner";
     NbEvaIconsModule,
     NbIconModule,
     FontAwesomeModule,
-    NgxGistModule,
     NgxSpinnerModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
