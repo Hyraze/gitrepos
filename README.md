@@ -1,5 +1,6 @@
 # Gitrepos
 ![E2E Test](https://github.com/Hyraze/gitrepos/workflows/E2E%20Test/badge.svg?branch=master)
+[![Build Status](https://travis-ci.org/Hyraze/gitrepos.svg?branch=master)](https://travis-ci.org/Hyraze/gitrepos)
 
 A PWA app providing Trending Repositories & Developers from GitHub, Gitlab & HackerNews 
 
