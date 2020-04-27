@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "stable"
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: required
+cache:
+  directories:
+  - node_modules
+script:
+  - ng build --prod --base-href "https://gitrepos.now.sh"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $github_token
+  local_dir: dist
+  fqdn: hyraze.github.io/gitrepos
+  on:
+    branch: master
+after_script:
+  - bash -c "$(curl -fsSL https://raw.githubusercontent.com/MaT1g3R/travis_discord/master/travis.sh)"
+  
