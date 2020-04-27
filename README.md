@@ -1,11 +1,10 @@
-<h1 align="center">Gitrepos</h1>
-
-<p align="center">:octocat: A simple PWA app that returns Trending Repositories & Developers from GitHub, Gitlab & HackerNews.</p>
-
 <div align="center">
   <img src="src/assets/icons/icon-512x512.png" alt="hero image" width="400"/>
 </div>
 <br />
+<h1 align="center">Gitrepos</h1>
+
+<p align="center">:octocat: A simple PWA app that returns Trending Repositories & Developers from GitHub, Gitlab & HackerNews.</p>
 
 [![E2E Test](https://github.com/Hyraze/gitrepos/workflows/E2E%20Test/badge.svg?branch=master)](https://github.com/Hyraze/gitrepos/workflows/E2E)
 [![Build Status](https://travis-ci.org/Hyraze/gitrepos.svg?branch=master)](https://travis-ci.org/Hyraze/gitrepos)
