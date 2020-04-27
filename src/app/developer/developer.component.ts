@@ -26,7 +26,7 @@ export class DeveloperComponent implements OnInit {
   ngOnInit() {
     this.loadLanguages();
     this.loadDevs();
-    this.spinner.show();
+        this.spinner.show();
  
     setTimeout(() => {
       /** spinner ends after 5 seconds */
