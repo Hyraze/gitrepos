@@ -10,7 +10,7 @@ describe('gitrepos App', () => {
 
   it('should display Home Title', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('GitRepos');
+    expect(page.getTitleText()).toEqual('Gitrepos');
   });
 
   afterEach(async () => {
