@@ -9,7 +9,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e --webdriver-update=false",
-    "webdriver-update": "webdriver-manager update --versions.chrome=$(google-chrome-stable --version | cut -d ' ' -f 3)"
+    "webdriver-update": "webdriver-manager update --versions.chrome=$(google-chrome-stable --version | cut -d ' ' -f 3)",
+    "export":"ng build --prod && ng serve",
+    "now-deploy":"now ./out --static --no-clipboard --token=$NOW_TOKEN --public"
   },
   "private": true,
   "dependencies": {

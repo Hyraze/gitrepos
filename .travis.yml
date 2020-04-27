@@ -9,14 +9,12 @@ matrix:
 cache:
   directories:
   - node_modules
-script:
-  - ng build --prod --base-href "https://hyraze.github.io/gitrepos"
+script: npm run export
 deploy:
-  provider: pages
+  provider: script
+  script: npm run now-deploy
   skip_cleanup: true
-  github_token: $githubtoken
   local_dir: dist
-  fqdn: hyraze.github.io/gitrepos
   on:
     branch: master
 after_script:
