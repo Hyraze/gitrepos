@@ -10,7 +10,7 @@ cache:
   directories:
   - node_modules
 script:
-  - ng build --prod --base-href "https://gitrepos.now.sh"
+  - ng build --prod --base-href "https://hyraze.github.io/gitrepos"
 deploy:
   provider: pages
   skip_cleanup: true
