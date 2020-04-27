@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NbSidebarService, NbThemeService } from '@nebular/theme';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
-  constructor(private sidebarService: NbSidebarService, private themeService: NbThemeService) {}
+  constructor(private sidebarService: NbSidebarService, private themeService: NbThemeService,private spinner: NgxSpinnerService) {}
   title = 'gitrepos';
   sun = 'sun';
   moon = 'moon';
@@ -57,5 +58,14 @@ export class AppComponent {
       this.themeService.changeTheme('cosmic');
       this.icon = this.sun;
     }
+  }
+  ngOnInit() {
+    /** spinner starts on init */
+    this.spinner.show();
+ 
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 5000);
   }
 }

@@ -1,3 +1,5 @@
+<ngx-spinner bdColor = "rgba(21, 21, 48, 0.9)" size = "medium" color = "#00fff2" type = "ball-scale-ripple-multiple" [fullScreen] = "false">
+</ngx-spinner>
 <div class="header">
   
   <div class="filter">
@@ -31,7 +33,7 @@
 <div class="container" *ngFor="let repository of repositories">
   <div class="card">
   <a href="{{ repository.url }}">
-    <nb-card size="tiny" class="repoCard zoom">
+    <nb-card  size="tiny" class="repoCard zoom">
     <nb-card-header>
       <a class="repoName" href="{{ repository.url }}"><img src="{{ repository.avatar }}" alt="avatar" class="avatar" /> </a>
       <a class="repoName" href="{{ repository.url }}"><strong>{{ repository.name }}</strong> |<br/> {{repository.author}} </a>

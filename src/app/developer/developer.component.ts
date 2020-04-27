@@ -4,6 +4,7 @@ import { Developer } from '../model/developer';
 import { Language } from '../model/language';
 import { FormControl } from '@angular/forms';
 import { faCodeBranch,faFileCode,faStar } from '@fortawesome/free-solid-svg-icons';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-developer',
@@ -20,11 +21,17 @@ export class DeveloperComponent implements OnInit {
   selectedLanguage = 'all';
   loading = true;
 
-  constructor(private trendingService: TrendingService) { }
+  constructor(private trendingService: TrendingService,private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
     this.loadLanguages();
     this.loadDevs();
+    this.spinner.show();
+ 
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 2000);
   }
 
   onLanuguageSelected(event) {

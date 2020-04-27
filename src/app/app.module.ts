@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +25,8 @@ import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { NgxGistModule } from 'ngx-gist/dist/ngx-gist.module';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { environment } from '../environments/environment';
     NbEvaIconsModule,
     NbSearchModule,
     NbButtonModule,
+    BrowserModule,
+    FormsModule,
     NbCardModule,
     NbTooltipModule,
     NbSelectModule,
@@ -58,8 +62,11 @@ import { environment } from '../environments/environment';
     NbEvaIconsModule,
     NbIconModule,
     FontAwesomeModule,
+    NgxGistModule,
+    NgxSpinnerModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
