@@ -1,5 +1,5 @@
 # Gitrepos
-
+![E2E Test](https://github.com/Hyraze/gitrepos/workflows/E2E%20Test/badge.svg?branch=master)
 A PWA app providing Trending Repositories & Developers from GitHub, Gitlab & HackerNews 
 
 
