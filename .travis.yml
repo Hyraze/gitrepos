@@ -14,7 +14,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $github_token
+  github_token: $githubtoken
   local_dir: dist
   fqdn: hyraze.github.io/gitrepos
   on:
