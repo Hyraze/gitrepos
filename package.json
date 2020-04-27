@@ -10,8 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e --webdriver-update=false",
     "webdriver-update": "webdriver-manager update --versions.chrome=$(google-chrome-stable --version | cut -d ' ' -f 3)",
-    "export":"ng build --prod",
-    "now-deploy":"now ./out --static --no-clipboard --token=$NOW_TOKEN --public"
+    "export": "ng build --prod",
+    "now-deploy": "now ./out --static --no-clipboard --token=$NOW_TOKEN --public"
   },
   "private": true,
   "dependencies": {
@@ -65,6 +65,7 @@
     "karma-coverage-istanbul-reporter": "^2.1.1",
     "karma-jasmine": "^3.1.1",
     "karma-jasmine-html-reporter": "^1.5.3",
+    "now": "^18.0.0",
     "protractor": "^5.4.4",
     "sw-precache-webpack-plugin": "^1.0.0",
     "ts-node": "^8.9.1",
