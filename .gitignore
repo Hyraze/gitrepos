@@ -24,5 +24,6 @@ testem.log
 /connect.lock
 /coverage
 /out-tsc
+.env
 
 
