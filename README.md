@@ -10,6 +10,11 @@
 [![Build Status](https://travis-ci.org/Hyraze/gitrepos.svg?branch=master)](https://travis-ci.org/Hyraze/gitrepos)
 [![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Hyraze/gitrepos/blob/master/LICENSE)
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg)](CODE_OF_CONDUCT.md)
+[![Known Vulnerabilities](https://snyk.io/test/github/Hyraze/gitrepos/badge.svg?targetFile=package.json)](https://snyk.io/test/github/Hyraze/gitrepos?targetFile=package.json)
+[![dependencies Status](https://david-dm.org/Hyraze/gitrepos/status.svg)](https://david-dm.org/Hyraze/gitrepos)
+[![devDependencies Status](https://david-dm.org/Hyraze/gitrepos/dev-status.svg)](https://david-dm.org/Hyraze/gitrepos?type=dev)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/Hyraze/gitrepos/issues)
+
 
 ### 🏠 [Homepage](https://github.com/Hyraze/gitrepos#readme)
 
