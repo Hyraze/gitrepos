@@ -35,9 +35,9 @@ export class AppComponent implements OnInit {
       pathMatch: '/full'
     },
     {
-      title: 'Fork on Github',
+      title: 'Contribute',
       icon: 'github',
-      url: 'https://github.com/hyraze/',
+      url: 'https://github.com/Hyraze/gitrepos',
       target: '_blank',
     },
   ];
