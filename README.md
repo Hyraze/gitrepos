@@ -27,9 +27,8 @@
 ## Get Started
 - Run the command `ng serve` to run the dev server. Navigate to `http://localhost:4200/`.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-Please make sure to update tests as appropriate.
+## 🤝 Contributing
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Hyraze/feedgator/issues). 
 
 ## Show your support
 Give a ⭐️ if this project helped you!
