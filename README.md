@@ -18,7 +18,7 @@
 
 ### 🏠 [Homepage](https://github.com/Hyraze/gitrepos#readme)
 
-### ✨ [Demo](https://gitrepos.now.sh/)
+### ✨ [Demo](https://gitrepos.now.sh/ )
 
 ## Prerequisites
 - NodeJS (I recommend using latest version)
