@@ -42,6 +42,7 @@ Give a ⭐️ if this project helped you!
 * [stargit](https://stargit.xyz/) 
 * [Nebular](https://akveo.github.io/nebular) 
 
+## 📝 License
 #### GNU General Public License v2.0 License
 Copyright (c) 2020 Hanishraj B Rao  
 
