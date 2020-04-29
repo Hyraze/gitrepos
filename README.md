@@ -21,7 +21,7 @@
 ### ✨ [Demo](https://gitrepos.now.sh/)
 
 ## Prerequisites
-- NodeJS (I recommend using latest version)
+- NodeJS(I recommend using latest version)
 - Angular(Latest Version ^9.x.x)
 
 ## Get Started
