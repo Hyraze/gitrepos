@@ -22,7 +22,7 @@
 
 ## Prerequisites
 - NodeJS (I recommend using latest version)
-- AngularJS (Latest Version ^9.x.x)
+- Angular (Latest Version ^9.x.x)
 
 ## Get Started
 - Run the command `ng serve` to run the dev server. Navigate to `http://localhost:4200/`.
