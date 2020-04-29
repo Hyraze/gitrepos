@@ -6,7 +6,6 @@
 <br />
 <p align="center">:octocat: A simple PWA app that returns Trending Repositories & Developers from GitHub, Gitlab & HackerNews.</p>
 
-[![E2E Test](https://github.com/Hyraze/gitrepos/workflows/E2E%20Test/badge.svg?branch=master)](https://github.com/Hyraze/gitrepos/workflows/E2E)
 [![Build Status](https://travis-ci.org/Hyraze/gitrepos.svg?branch=master)](https://travis-ci.org/Hyraze/gitrepos)
 [![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Hyraze/gitrepos/blob/master/LICENSE)
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg)](CODE_OF_CONDUCT.md)
