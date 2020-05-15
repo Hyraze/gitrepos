@@ -24,7 +24,7 @@
 
 ## Prerequisites
 - NodeJS(I recommend using latest version)
-- Angular(Latest Version ^9.x.x)
+- Angular
 
 
 ## Further help
