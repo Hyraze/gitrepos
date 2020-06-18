@@ -36,13 +36,13 @@ export class AppComponent implements OnInit {
     },
   {
       title: 'Techbite',
-      icon: 'cookie-bite',
+      icon: 'code-outline',
       link: 'https://tx.me/techbite',
       pathMatch: '_blank'
     },
     {
       title: 'Community',
-      icon: 'telegram',
+      icon: 'paper-plane-outline',
       url: 'https://tx.me/gitrepos',
       target: '_blank'
     },
