@@ -34,11 +34,17 @@ export class AppComponent implements OnInit {
       link: '/about',
       pathMatch: '/full'
     },
+  {
+      title: 'Techbite',
+      icon: 'cookie-bite',
+      link: 'https://tx.me/techbite',
+      pathMatch: '_blank'
+    },
     {
-      title: 'Contribute',
-      icon: 'github',
-      url: 'https://github.com/Hyraze/gitrepos',
-      target: '_blank',
+      title: 'Community',
+      icon: 'telegram',
+      url: 'https://tx.me/gitrepos',
+      target: '_blank'
     },
   ];
 
