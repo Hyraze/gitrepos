@@ -37,7 +37,7 @@ export class AppComponent implements OnInit {
   {
       title: 'Techbite',
       icon: 'code-outline',
-      link: 'https://tx.me/techbite',
+      url: 'https://tx.me/techbite',
       target: '_blank'
     },
     {
