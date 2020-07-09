@@ -62,7 +62,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     NbIconModule,
     FontAwesomeModule,
     NgxSpinnerModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/pwabuilder-sw.js', { enabled: environment.production })
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
