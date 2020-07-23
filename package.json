@@ -52,7 +52,7 @@
     "@schematics/angular": "9.1.10",
     "@types/jasmine": "3.5.11",
     "@types/jasminewd2": "2.0.8",
-    "@types/node": "13.13.13",
+    "@types/node": "13.13.15",
     "angular-cli-ghpages": "0.6.2",
     "codelyzer": "6.0.0",
     "jasmine-core": "3.5.0",
