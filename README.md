@@ -28,6 +28,7 @@ To get more help on the Angular CLI use ng help or go check out the [Angular CLI
 
 ## 🤝 Contributing
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Hyraze/feedgator/issues).
+* [Development Branch](https://github.com/Hyraze/gitrepos/tree/master-dev)
 
 
 ## Show your support
@@ -35,7 +36,7 @@ Give a ⭐️ if this project helped you!
 
 
 ## Goals
-* [Future Goals](https://gist.githubusercontent.com/Hyraze/2eb4542b79fd73507c6011eff40e0034/raw/102fae0d55080cc353e77376c9a9cd0068608cda/gitrepogoals.md)
+* [Roadmap](https://gist.githubusercontent.com/Hyraze/2eb4542b79fd73507c6011eff40e0034/raw/102fae0d55080cc353e77376c9a9cd0068608cda/gitrepogoals.md)
 
 
 ## Credits
