@@ -39,7 +39,7 @@
     "eva-icons": "1.1.3",
     "font-awesome": "4.7.0",
     "ngx-spinner": "9.0.2",
-    "node-fetch": "2.6.0",
+    "node-fetch": "2.6.1",
     "rxjs": "6.6.0",
     "tslib": "2.0.0",
     "zone.js": "0.10.3"
