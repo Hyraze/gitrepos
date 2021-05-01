@@ -4,16 +4,15 @@ import { HomeComponent } from './home/home.component';
 import { DeveloperComponent } from './developer/developer.component';
 import { AboutComponent } from './about/about.component';
 
-
 const routes: Routes = [
-  {path: '', redirectTo: '/trending', pathMatch: 'full'},
-  {path: 'trending', component: HomeComponent},
-  {path: 'developer', component: DeveloperComponent},
-  {path: 'about', component: AboutComponent}
+  { path: '', redirectTo: '/trending', pathMatch: 'full' },
+  { path: 'trending', component: HomeComponent },
+  { path: 'developer', component: DeveloperComponent },
+  { path: 'about', component: AboutComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

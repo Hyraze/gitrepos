@@ -1,5 +1,4 @@
 <div class="header">
-  
   <div class="filter">
     <nb-select
       class="language alignselect"
@@ -30,23 +29,35 @@
 </div>
 <div class="container" *ngFor="let repository of repositories">
   <div class="card">
-  <a href="{{ repository.url }}">
-    <nb-card  size="tiny" class="repoCard zoom">
-    <nb-card-header>
-      <a class="repoName" href="{{ repository.url }}"><img src="{{ repository.avatar }}" alt="avatar" class="avatar" /> </a>
-      <a class="repoName" href="{{ repository.url }}"><strong>{{ repository.name }}</strong> |<br/> {{repository.author}} </a>
-  
-   </nb-card-header>
-   <nb-card-body class="des" *ngIf="repository.description">
-    {{ repository.description }}
-  </nb-card-body>
-  <nb-card-footer>
-    <span class="iconCount"><fa-icon class="iconSpace" [icon]="star"></fa-icon>{{ repository.stars }}</span>
-    <span class="iconCount"><fa-icon class="iconSpace" [icon]="fork"></fa-icon>{{ repository.forks}}</span>
-    <span class="iconCount"><fa-icon class="iconSpace" [icon]="language"></fa-icon>{{ repository.language}}</span>
-  </nb-card-footer>
-    </nb-card>
-  </a>
+    <a href="{{ repository.url }}">
+      <nb-card size="tiny" class="repoCard zoom">
+        <nb-card-header>
+          <a class="repoName" href="{{ repository.url }}"
+            ><img src="{{ repository.avatar }}" alt="avatar" class="avatar" />
+          </a>
+          <a class="repoName" href="{{ repository.url }}"
+            ><strong>{{ repository.name }}</strong> |<br />
+            {{repository.author}}
+          </a>
+        </nb-card-header>
+        <nb-card-body class="des" *ngIf="repository.description">
+          {{ repository.description }}
+        </nb-card-body>
+        <nb-card-footer>
+          <span class="iconCount"
+            ><fa-icon class="iconSpace" [icon]="star"></fa-icon>{{
+            repository.stars }}</span
+          >
+          <span class="iconCount"
+            ><fa-icon class="iconSpace" [icon]="fork"></fa-icon>{{
+            repository.forks}}</span
+          >
+          <span class="iconCount"
+            ><fa-icon class="iconSpace" [icon]="language"></fa-icon>{{
+            repository.language}}</span
+          >
+        </nb-card-footer>
+      </nb-card>
+    </a>
   </div>
 </div>
-
