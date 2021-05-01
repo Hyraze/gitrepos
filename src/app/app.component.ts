@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
     {
       title: 'Trending Repos',
       icon: 'book',
-      link: '/trending',
+      link: '/',
       pathMatch: '/full',
     },
     {

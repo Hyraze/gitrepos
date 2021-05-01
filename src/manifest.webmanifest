@@ -5,7 +5,7 @@
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
-  "start_url": "https://gitrepos.xyz/trending",
+  "start_url": "https://gitrepos.xyz",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
