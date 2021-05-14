@@ -24,7 +24,7 @@
     "@angular/pwa": "^0.1102.11",
     "@angular/router": "^11.2.12",
     "@angular/service-worker": "^11.2.12",
-    "@fortawesome/angular-fontawesome": "^0.8.2",
+    "@fortawesome/angular-fontawesome": "0.9.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
