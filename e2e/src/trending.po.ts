@@ -2,7 +2,7 @@ import { browser, by, element } from 'protractor';
 
 export class TrendingPage {
   navigateTo() {
-    return browser.get('/trending');
+    return browser.get('/');
   }
 
   getPageHeaderText() {
