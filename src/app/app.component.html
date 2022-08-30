@@ -1,37 +1,53 @@
-<ngx-spinner bdColor = "rgb(21, 21, 48)" size = "medium" color = "#00fff2" type = "ball-scale-multiple" [fullScreen] = "true">
+<ngx-spinner
+  bdColor="rgb(21, 21, 48)"
+  size="medium"
+  color="#00fff2"
+  type="ball-scale-multiple"
+  [fullScreen]="true"
+>
 </ngx-spinner>
 <nb-layout>
   <nb-layout-header fixed>
-
     <div class="title">
-    
-        <a style="text-decoration:none;"[routerLink]="['/trending']">
-          Gitrepos
-        </a> 
+      <a style="text-decoration: none;" [routerLink]="['/']">
+        Gitrepos
+      </a>
     </div>
-    <button ghost nbButton size="large" shape="round" (click)="changeTheme()" right>
-      
-      <nb-icon icon={{icon}} [options]="{ animation: { type: 'zoom' } }"></nb-icon>
-    
+    <button
+      ghost
+      nbButton
+      size="large"
+      shape="round"
+      (click)="changeTheme()"
+      right
+    >
+      <nb-icon
+        icon="{{icon}}"
+        [options]="{ animation: { type: 'zoom' } }"
+      ></nb-icon>
     </button>
-    <button  ghost size="tiny" (click)="toggle()" class="sidebar-toggle">
-      
+    <button ghost size="tiny" (click)="toggle()" class="sidebar-toggle">
       <nb-icon class="sidebar-toggle-icon" icon="menu-2"></nb-icon>
-    
     </button>
-     
   </nb-layout-header>
   <nb-sidebar responsive="true" state="collapsed" tag="right" right="true">
-    <nb-menu (click)="collapseAll()" autoCollapse="true" [items]="items"></nb-menu>
+    <nb-menu
+      (click)="collapseAll()"
+      autoCollapse="true"
+      [items]="items"
+    ></nb-menu>
   </nb-sidebar>
   <nb-layout-column>
     <ng-progress></ng-progress>
     <router-outlet></router-outlet>
-    
   </nb-layout-column>
 
   <nb-layout-footer fixed>
-      Made with&nbsp;<nb-icon icon="heart" status="danger" [options]="{ animation: { type: 'zoom' } }"></nb-icon>&nbsp;by Hyraze
-   </nb-layout-footer>
+    Made with&nbsp;<nb-icon
+      icon="heart"
+      status="danger"
+      [options]="{ animation: { type: 'zoom' } }"
+    ></nb-icon
+    >&nbsp;by Hyraze
+  </nb-layout-footer>
 </nb-layout>
-

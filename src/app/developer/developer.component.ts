@@ -3,23 +3,27 @@ import { TrendingService } from '../service/trending.service';
 import { Developer } from '../model/developer';
 import { Language } from '../model/language';
 import { FormControl } from '@angular/forms';
-import { faCodeBranch,faFileCode,faStar } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCodeBranch,
+  faFileCode,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-developer',
   templateUrl: './developer.component.html',
-  styleUrls: ['./developer.component.scss']
+  styleUrls: ['./developer.component.scss'],
 })
 export class DeveloperComponent implements OnInit {
   fork = faCodeBranch;
-  language=faFileCode;
-  star=faStar;
+  language = faFileCode;
+  star = faStar;
   developers: Developer;
   languages: Language;
   selectedSince = 'daily';
   selectedLanguage = 'all';
   loading = true;
 
-  constructor(private trendingService: TrendingService) { }
+  constructor(private trendingService: TrendingService) {}
 
   ngOnInit() {
     this.loadLanguages();
@@ -35,17 +39,16 @@ export class DeveloperComponent implements OnInit {
   }
 
   loadDevs(language: string = '', since: string = '') {
-    language = (language !== 'all' ? language : '');
+    language = language !== 'all' ? language : '';
     this.trendingService.getTrendingDevs(language, since).subscribe({
-      next: (data: Developer) => this.developers = data,
-      complete: () => this.loading === false
+      next: (data: Developer) => (this.developers = data),
+      complete: () => this.loading === false,
     });
   }
 
   loadLanguages() {
     this.trendingService.getLanguages().subscribe({
-      next: (data: Language) => this.languages = data
+      next: (data: Language) => (this.languages = data),
     });
   }
 }
-

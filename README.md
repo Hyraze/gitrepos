@@ -18,7 +18,6 @@
 
 
 ## Prerequisites
-- NodeJS(I recommend using latest version)
 - Angular
 
 
