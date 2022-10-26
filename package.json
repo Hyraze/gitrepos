@@ -65,7 +65,7 @@
     "now": "^21.0.1",
     "protractor": "7.0.0",
     "sw-precache-webpack-plugin": "1.0.0",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.0.0",
     "tslint": "^6.1.3",
     "typescript": "~4.1.0"
   }
