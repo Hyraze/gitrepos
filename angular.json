@@ -120,5 +120,7 @@
       }
     }
   },
-  "defaultProject": "gitrepos"
+  "cli": {
+    "analytics": false
+  }
 }
