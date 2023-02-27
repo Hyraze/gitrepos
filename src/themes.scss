@@ -1,7 +1,7 @@
-@import '~@nebular/theme/styles/theming';
-@import '~@nebular/theme/styles/themes/dark';
-@import '~@nebular/theme/styles/themes/default';
-@import '~@nebular/theme/styles/themes/cosmic';
+@import '@nebular/theme/styles/theming';
+@import '@nebular/theme/styles/themes/dark';
+@import '@nebular/theme/styles/themes/default';
+@import '@nebular/theme/styles/themes/cosmic';
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 $nb-enable-css-custom-properties: true;
