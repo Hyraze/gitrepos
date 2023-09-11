@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "now-build": "ng build --prod",
+    "now-build": "ng build --optimization",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e --webdriver-update=false",
