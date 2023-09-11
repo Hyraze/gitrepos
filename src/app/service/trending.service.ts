@@ -10,7 +10,7 @@ import { Language } from '../model/language';
 })
 export class TrendingService {
 
-  url = 'https://gtrend.yapie.me';
+  url = 'https://api.gitterapp.com';
 
   constructor(private http: HttpClient) {
   }
