@@ -63,7 +63,7 @@
     "karma-coverage-istanbul-reporter": "3.0.3",
     "karma-jasmine": "^5.1.0",
     "karma-jasmine-html-reporter": "2.0.0",
-    "vercel": "^21.0.0",
+    "vercel": "^32.0.0",
     "protractor": "7.0.0",
     "sw-precache-webpack-plugin": "1.0.0",
     "ts-node": "^10.9.1",
