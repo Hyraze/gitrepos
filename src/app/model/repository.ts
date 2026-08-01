@@ -13,7 +13,7 @@ export interface Repository {
   stars: string;
   forks: string;
   addStars: string;
-  contributors: Contributor[];
+  contributors?: Contributor[];
   isNew?: boolean;
 }
 
