@@ -105,6 +105,64 @@
   text-decoration: underline;
 }
 
+.ecosystem-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.ecosystem-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.eco-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.eco-link:hover {
+  background: rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.3);
+  transform: translateX(4px);
+}
+
+.eco-link mat-icon {
+  color: #d8b4fe;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.eco-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.eco-name {
+  font-weight: 700;
+  color: #f9fafb;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.eco-desc {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
 .card-footer {
   display: flex;
   justify-content: flex-start;

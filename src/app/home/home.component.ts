@@ -58,9 +58,6 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
               </span>
             }
           </h2>
-          @if (displayRepos().length) {
-            <span class="repo-count">{{ displayRepos().length }}</span>
-          }
         </div>
 
         <div class="controls-area">
@@ -322,10 +319,6 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
       .fire-icon {
         font-size: 1.1rem;
       }
-      .repo-count {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-      }
       .controls-area {
         flex-direction: column;
         align-items: stretch;
@@ -388,7 +381,7 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
       border: 1px solid rgba(255, 255, 255, 0.1);
       color: #e5e7eb;
       padding: 0 20px;
-      height: 40px;
+      height: 56px;
       cursor: pointer;
       font-family: inherit;
       font-size: 0.95rem;
@@ -430,6 +423,8 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(0, 0, 0, 0.2);
       box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 56px;
+      display: flex;
     }
 
     ::ng-deep .period-toggle .mat-button-toggle {
@@ -438,8 +433,17 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
       font-weight: 600;
       color: #9ca3af;
       background: transparent;
-      padding: 4px 16px;
+      padding: 0;
+      height: 100%;
       transition: all 0.2s ease;
+    }
+    
+    ::ng-deep .period-toggle .mat-button-toggle-label-content {
+      line-height: 56px !important;
+      padding: 0 16px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     ::ng-deep .period-toggle .mat-button-toggle-checked {
@@ -466,18 +470,6 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
       color: #ffffff;
       -webkit-text-fill-color: #ffffff;
     }
-
-    .repo-count {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #f472b6;
-      padding: 6px 16px;
-      border-radius: 20px;
-      background: rgba(244, 114, 182, 0.1);
-      border: 1px solid rgba(244, 114, 182, 0.2);
-      box-shadow: 0 4px 12px rgba(244, 114, 182, 0.1);
-    }
-
     .loading-state, .error-state {
       display: flex;
       flex-direction: column;
