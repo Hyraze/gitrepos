@@ -306,45 +306,75 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
     @media (max-width: 768px) {
       .dashboard-header {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
+        align-items: stretch;
+        gap: 16px;
       }
       .title-area {
         gap: 8px;
         width: 100%;
         flex-wrap: wrap;
+        align-items: center;
       }
       .section-title {
-        font-size: 1.4rem;
-        line-height: 1.3;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
+        line-height: 1.2;
       }
       .fire-icon {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
       .repo-count {
         font-size: 0.75rem;
         padding: 4px 8px;
-        white-space: nowrap;
       }
-      .controls-area, .actions-right {
+      .controls-area {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+      }
+      .actions-right {
         flex-direction: column;
         align-items: stretch;
         width: 100%;
+        gap: 12px;
       }
-      .lang-search {
+      .lang-search, .keyword-search {
         min-width: 100%;
+        width: 100%;
         max-width: 100%;
       }
       .period-toggle {
         display: flex;
         width: 100%;
       }
+      .bookmark-toggle {
+        width: 100%;
+        justify-content: center;
+      }
       ::ng-deep .period-toggle .mat-button-toggle {
         flex: 1;
       }
       ::ng-deep .period-toggle .mat-button-toggle-label-content {
-        padding: 0 8px !important;
-        font-size: 0.85rem !important;
+        padding: 0 4px !important;
+        font-size: 0.8rem !important;
+      }
+      
+      .repo-card {
+        padding: 24px 20px;
+        gap: 12px;
+      }
+      .repo-title {
+        font-size: 1.15rem;
+      }
+      .repo-description {
+        font-size: 0.95rem;
+      }
+      .lang-chip {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+      }
+      .stat {
+        font-size: 0.85rem;
       }
     }
 
@@ -540,9 +570,8 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
     .repo-title {
       font-weight: 700;
       font-size: 1.4rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      overflow-wrap: break-word;
+      word-break: break-word;
       color: #f9fafb;
       letter-spacing: -0.01em;
       flex: 1;
