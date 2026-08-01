@@ -38,7 +38,7 @@
     "@angular/cli": "^19.2.0",
     "@angular/compiler-cli": "^19.2.0",
     "@types/dompurify": "^3.0.5",
-    "@types/jasmine": "^5.1.0",
+    "@types/jasmine": "^6.0.0",
     "@types/marked": "^5.0.2",
     "@types/node": "^22.0.0",
     "jasmine-core": "^5.4.0",
