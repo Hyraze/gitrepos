@@ -1,53 +1,47 @@
-<ngx-spinner
-  bdColor="rgb(21, 21, 48)"
-  size="medium"
-  color="#00fff2"
-  type="ball-scale-multiple"
-  [fullScreen]="true"
->
-</ngx-spinner>
-<nb-layout>
-  <nb-layout-header fixed>
-    <div class="title">
-      <a style="text-decoration: none;" [routerLink]="['/']">
-        Gitrepos
-      </a>
-    </div>
-    <button
-      ghost
-      nbButton
-      size="large"
-      shape="round"
-      (click)="changeTheme()"
-      right
-    >
-      <nb-icon
-        icon="{{icon}}"
-        [options]="{ animation: { type: 'zoom' } }"
-      ></nb-icon>
-    </button>
-    <button ghost size="tiny" (click)="toggle()" class="sidebar-toggle">
-      <nb-icon class="sidebar-toggle-icon" icon="menu-2"></nb-icon>
-    </button>
-  </nb-layout-header>
-  <nb-sidebar responsive="true" state="collapsed" tag="right" right="true">
-    <nb-menu
-      (click)="collapseAll()"
-      autoCollapse="true"
-      [items]="items"
-    ></nb-menu>
-  </nb-sidebar>
-  <nb-layout-column>
-    <ng-progress></ng-progress>
-    <router-outlet></router-outlet>
-  </nb-layout-column>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="over" position="end" [(opened)]="sidenavOpen" class="sidenav">
+    <mat-nav-list>
+      @for (link of navLinks; track link.path) {
+        <a mat-list-item
+           [routerLink]="link.path"
+           routerLinkActive="active-link"
+           [routerLinkActiveOptions]="{ exact: true }"
+           (click)="toggleSidenav()">
+          <mat-icon matListItemIcon>{{ link.icon }}</mat-icon>
+          <span matListItemTitle>{{ link.label }}</span>
+        </a>
+      }
+    </mat-nav-list>
+  </mat-sidenav>
 
-  <nb-layout-footer fixed>
-    Made with&nbsp;<nb-icon
-      icon="heart"
-      status="danger"
-      [options]="{ animation: { type: 'zoom' } }"
-    ></nb-icon
-    >&nbsp;by Hyraze
-  </nb-layout-footer>
-</nb-layout>
+  <mat-sidenav-content>
+    <mat-toolbar class="app-toolbar" color="primary">
+      <a class="brand" routerLink="/">
+        <span class="brand-icon">◈</span>
+        <span class="brand-name">GitRepos</span>
+      </a>
+      <span class="spacer"></span>
+      <nav class="desktop-nav">
+        @for (link of navLinks; track link.path) {
+          <a mat-button
+             [routerLink]="link.path"
+             routerLinkActive="active-nav"
+             [routerLinkActiveOptions]="{ exact: true }">
+            {{ link.label }}
+          </a>
+        }
+      </nav>
+      <button mat-icon-button class="mobile-menu-btn" (click)="toggleSidenav()" aria-label="Menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <main class="content">
+      <router-outlet />
+    </main>
+
+    <footer class="app-footer">
+      <span>Made with <mat-icon class="heart-icon" inline>favorite</mat-icon> by Hyraze</span>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

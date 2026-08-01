@@ -1,17 +1,33 @@
-<h1>About</h1>
-<p>
-    Gitrepos : Trending repositories from GitHub, Gitlab & HackerNews 
-    Copyright (C) 2020  Hanishraj B Rao
+<div class="about-container">
+  <div class="glass-card">
+    <div class="card-header">
+      <mat-icon class="logo-icon">rocket_launch</mat-icon>
+      <h1 class="title">About <span class="highlight">GitRepos</span></h1>
+    </div>
+    
+    <div class="card-body">
+      <p class="description">
+        GitRepos surfaces the most popular repositories trending on GitHub across
+        JavaScript, TypeScript, Python, Go, and Shell - updated daily, weekly, and monthly.
+      </p>
 
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-</p>
-<a href="https://gist.githubusercontent.com/Hyraze/2eb4542b79fd73507c6011eff40e0034/raw/102fae0d55080cc353e77376c9a9cd0068608cda/gitrepogoals.md">Future Goals</a>
+      <div class="data-source">
+        <mat-icon class="source-icon">dataset</mat-icon>
+        <p>
+          Data is sourced from
+          <a href="https://github.com/Hyraze/trending-collection" target="_blank" rel="noopener">
+            Hyraze/trending-collection
+          </a>
+          JSON API.
+        </p>
+      </div>
+    </div>
+    
+    <div class="card-footer">
+      <a class="github-btn" href="https://github.com/Hyraze/gitrepos" target="_blank" rel="noopener">
+        <mat-icon>open_in_new</mat-icon>
+        <span>View Source on GitHub</span>
+      </a>
+    </div>
+  </div>
+</div>

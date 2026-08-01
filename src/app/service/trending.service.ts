@@ -1,29 +1,46 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Repository } from '../model/repository';
-import { Developer } from '../model/developer';
-import { Language } from '../model/language';
+import { Observable, map, shareReplay, of } from 'rxjs';
+import { Repository, TrendingResponse, Language } from '../model/repository';
 
-@Injectable({
-  providedIn: 'root'
-})
+export type Period = 'daily' | 'weekly' | 'monthly';
+
+@Injectable({ providedIn: 'root' })
 export class TrendingService {
+  private readonly http = inject(HttpClient);
 
-  url = 'https://api.gitterapp.com';
+  private readonly baseUrl =
+    'https://cdn.jsdelivr.net/gh/Hyraze/trending-collection@main/api';
 
-  constructor(private http: HttpClient) {
+  private readonly languagesUrl =
+    'https://cdn.jsdelivr.net/gh/Hyraze/trending-collection@main/languages.json';
+
+  readonly languages$: Observable<Language[]> = this.http
+    .get<Language[]>(this.languagesUrl)
+    .pipe(shareReplay(1));
+
+  getTrending(
+    slug: string | null = null,
+    period: Period = 'daily'
+  ): Observable<Repository[]> {
+    const safeSlug = slug || 'all';
+    const url = `${this.baseUrl}/${period}/${safeSlug}.json`;
+
+    return this.http.get<TrendingResponse>(url).pipe(map((res) => res.items));
   }
 
-  getTrendingRepos(language: string, since: string): Observable<Repository> {
-    return this.http.get<Repository>(`${this.url}/repositories?language=${language}&since=${since}`);
-  }
-
-  getTrendingDevs(language: string, since: string): Observable<Developer> {
-    return this.http.get<Developer>(`${this.url}/developers?language=${language}&since=${since}`);
-  }
-
-  getLanguages(): Observable<Language> {
-    return this.http.get<Language>(`${this.url}/languages`);
+  getReadme(repoUrl: string): Observable<string> {
+    const parts = repoUrl.replace('https://github.com/', '').split('/');
+    if (parts.length < 2) return of('Invalid repository URL.');
+    
+    const owner = parts[0];
+    const repo = parts[1];
+    
+    // Fetch via GitHub API with custom accept header to get raw markdown
+    const url = `https://api.github.com/repos/${owner}/${repo}/readme`;
+    return this.http.get(url, { 
+      headers: { 'Accept': 'application/vnd.github.v3.raw' },
+      responseType: 'text'
+    });
   }
 }

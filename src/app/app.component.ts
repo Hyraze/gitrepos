@@ -1,73 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { NbSidebarService, NbThemeService } from '@nebular/theme';
-import { NgxSpinnerService } from 'ngx-spinner';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+  ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
-  constructor(
-    private sidebarService: NbSidebarService,
-    private themeService: NbThemeService,
-    private spinner: NgxSpinnerService
-  ) {}
-  title = 'gitrepos';
-  sun = 'sun';
-  moon = 'moon';
-  icon = this.sun;
+export class AppComponent {
+  sidenavOpen = false;
 
-  items = [
-    {
-      title: 'Trending Repos',
-      icon: 'book',
-      link: '/',
-      pathMatch: '/full',
-    },
-    {
-      title: 'Trending Devs',
-      icon: 'people',
-      link: '/developer',
-      pathMatch: '/full',
-    },
-    {
-      title: 'About',
-      icon: 'heart',
-      link: '/about',
-      pathMatch: '/full',
-    },
-    {
-      title: 'Community',
-      icon: 'paper-plane-outline',
-      url: 'https://tx.me/gitrepos',
-      target: '_blank',
-    },
+  readonly navLinks = [
+    { label: 'Trending Repos', icon: 'trending_up', path: '/' },
+    { label: 'About', icon: 'info', path: '/about' },
   ];
 
-  toggle() {
-    this.sidebarService.toggle(false, 'right');
-  }
-  collapseAll() {
-    this.sidebarService.toggle(false, 'right');
-  }
-
-  changeTheme() {
-    if (this.icon === this.sun) {
-      this.themeService.changeTheme('default');
-      this.icon = this.moon;
-    } else {
-      this.themeService.changeTheme('cosmic');
-      this.icon = this.sun;
-    }
-  }
-  ngOnInit() {
-    /** spinner starts on init */
-    this.spinner.show();
-
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 5000);
+  toggleSidenav() {
+    this.sidenavOpen = !this.sidenavOpen;
   }
 }

@@ -1,12 +1,63 @@
-@import 'themes';
+@use '@angular/material' as mat;
 
-@import '@nebular/theme/styles/globals';
+@include mat.core();
 
-@include nb-install() {
-  @include nb-theme-global();
-};
-@include nb-install-component {
+$theme: mat.define-theme((
+  color: (
+    theme-type: dark,
+    primary: mat.$violet-palette,
+    tertiary: mat.$cyan-palette,
+  ),
+  typography: (
+    brand-family: 'Inter, system-ui, sans-serif',
+    plain-family: 'Inter, system-ui, sans-serif',
+  ),
+  density: (
+    scale: 0,
+  ),
+));
 
-  background: nb-theme(background-basic-color-1);
+:root {
+  @include mat.all-component-themes($theme);
+  @include mat.system-level-colors($theme);
+  @include mat.system-level-typography($theme);
 }
-/* You can add global styles to this file, and also import other style files */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #09090e;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 60%);
+  background-attachment: fixed;
+  color: #f3f4f6;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

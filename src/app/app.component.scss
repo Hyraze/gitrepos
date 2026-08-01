@@ -1,36 +1,94 @@
-@import "../themes.scss";
-
-@include nb-install-component {
-
-  background: nb-theme(background-basic-color);
+.sidenav-container {
+  height: 100vh;
 }
 
+.sidenav {
+  width: 260px;
+  background: var(--surface-container);
+  padding-top: 1rem;
 
-nb-layout-header {
-  position: relative;
-  display: block;
+  .active-link {
+    background: var(--primary-container);
+    color: var(--on-primary-container);
+    border-radius: 0 24px 24px 0;
+    margin-right: 12px;
+  }
 }
 
-
-.sidebar-toggle {
-  border: none;
-  background-color: rgba(0, 0, 0, 0);
-  font-size: 2.5rem;
-  line-height: 1rem;
-  outline:none;
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  background: rgba(var(--mat-toolbar-container-background-color), 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.sidebar-toggle-icon {
-  vertical-align: middle;
-  font-size: 1.75rem;
-  color: rgb(137, 148, 163);
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+
+  .brand-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+    color: var(--mat-sys-primary);
+  }
+
+  .brand-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
 }
-.title {
-  font-size: 2.5em;
-  margin-left: 5px;
+
+.spacer {
   flex: 1;
-  font-family: nb-theme(font-family-primary);
-  display: inline-block;
-  color:color-primary-600; /*non-webkit fallback*/
 }
 
+.desktop-nav {
+  display: flex;
+  gap: 0.25rem;
+
+  .active-nav {
+    background: rgba(var(--mat-sys-primary-rgb, 103, 80, 164), 0.12);
+    border-radius: 4px;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.content {
+  min-height: calc(100vh - 128px);
+}
+
+.app-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1.25rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+  .heart-icon {
+    color: #e91e63;
+    vertical-align: middle;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: inline-flex;
+  }
+}
