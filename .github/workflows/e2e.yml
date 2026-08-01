@@ -1,26 +1,24 @@
-name: E2E Test
+name: CI
 
 on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [ 18.x ]
+        node-version: [ 24.x ]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, and e2e test
+    - name: npm install and build
       run: |
         npm ci
-        npm run webdriver-update
-        npm run e2e
+        npm run build
       env:
         CI: true

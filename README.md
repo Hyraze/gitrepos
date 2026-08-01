@@ -1,57 +1,70 @@
-<h1 align="center">Welcome to Gitrepos 👋</h1>
-<br />
 <div align="center">
-  <img src="src/assets/icons/icon-512x512.png" alt="hero image" width="400"/>
+  <img src="src/assets/icons/icon-512x512.png" alt="GitRepos Logo" width="120" />
+  <h1>GitRepos</h1>
+  <p>A High-utility developer curation engine for GitHub trending repositories.</p>
 </div>
-<br />
-<p align="center">:octocat: A simple PWA app that returns Trending Repositories & Developers from GitHub, Gitlab & HackerNews.</p>
 
-[![E2E Test](https://github.com/Hyraze/gitrepos/workflows/E2E%20Test/badge.svg?branch=master)](https://github.com/Hyraze/gitrepos/workflows/E2E)
-[![Build Status](https://travis-ci.org/Hyraze/gitrepos.svg?branch=master)](https://travis-ci.org/Hyraze/gitrepos)
-[![GitHub license](https://img.shields.io/badge/license-GPL-blue.svg)](https://github.com/Hyraze/gitrepos/blob/master/LICENSE)
-[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg)](CODE_OF_CONDUCT.md)
+<p align="center">
+  <a href="https://github.com/Hyraze/gitrepos/actions/workflows/e2e.yml">
+    <img src="https://github.com/Hyraze/gitrepos/actions/workflows/e2e.yml/badge.svg" alt="CI Status" />
+  </a>
+  <a href="https://gitrepos.vercel.app/">
+    <img src="https://img.shields.io/badge/Demo-Live-f472b6?style=flat-square&logo=vercel" alt="Live Demo" />
+  </a>
+  <a href="https://github.com/Hyraze/gitrepos/blob/master/LICENSE">
+    <img src="https://img.shields.io/badge/license-GPL--2.0-blue.svg?style=flat-square" alt="License" />
+  </a>
+</p>
 
-### 🏠 [Homepage](https://github.com/Hyraze/gitrepos#readme)
+## Overview
 
+**GitRepos** surfaces the most popular repositories trending on GitHub across JavaScript, TypeScript, Python, Go, and Shell. Tracked dynamically across daily, weekly, and monthly periods.
 
-### ✨ [Demo](https://gitrepos.now.sh/)
+Rebuilt from the ground up with **Angular 19** and **Signals**, featuring responsive mobile layouts and lightning-fast client-side filtering.
 
+### Key Features
 
-## Prerequisites
-- Angular
+- **Trending Languages Engine**: Daily, weekly, and monthly tracking of top developer repositories.
+- **In-App README Explorer**: Parse and render raw GitHub Markdown READMEs directly within an immersive modal, powered by `marked` and `dompurify`.
+- **Historical Tracking**: Client-side storage diffing automatically tracks what you've seen and badges **"NEW"** arrivals.
+- **Fast Filtering**: Real-time client-side keyword filtering powered entirely by Angular computed Signals.
 
+## Tech Stack
 
-## Further help
-To get more help on the Angular CLI use ng help or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- **Framework**: Angular 19 (Standalone Components, Signals, Application Builder)
+- **UI & Styling**: Custom SCSS, Angular Material 19
+- **Data Source**: Powered by the [Hyraze/trending-collection](https://github.com/Hyraze/trending-collection) JSON API
+- **Deployment**: Vercel (Node.js 24.x)
 
+## Local Development
 
-## 🤝 Contributing
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/Hyraze/feedgator/issues).
-* [Development Branch](https://github.com/Hyraze/gitrepos/tree/master-dev)
+Ensure you have **Node.js 24.x** installed to match the deployment environment.
 
+```bash
+# Clone the repository
+git clone https://github.com/Hyraze/gitrepos.git
+cd gitrepos
 
-## Show your support
-Give a ⭐️ if this project helped you!
+# Install dependencies
+npm ci
 
+# Start the development server
+npm run start
+```
+The app will be available at `http://localhost:4200/`.
 
-## Goals
-* [Roadmap](https://gist.githubusercontent.com/Hyraze/2eb4542b79fd73507c6011eff40e0034/raw/102fae0d55080cc353e77376c9a9cd0068608cda/gitrepogoals.md)
+## Other Projects
 
+- [**Collective AI Tools**](https://collectiveai.tools/) - Directory of AI utilities
+- [**Context Kit**](https://ck.collectiveai.tools/) - Developer context and state tools
+- [**Trending Collection API**](https://github.com/Hyraze/trending-collection) - The data backend for GitRepos
 
-## Credits
-* [Github Trending API](https://github.com/huchenme/github-trending-api) 
-* [stargit](https://stargit.xyz/) 
-* [Nebular](https://akveo.github.io/nebular) 
+## Contributing
 
+Contributions, issues, and feature requests are highly welcome!  
+Feel free to check the [issues page](https://github.com/Hyraze/gitrepos/issues).
 
-## 📝 License
-#### GNU General Public License v2.0 License
-Copyright (c) 2020 Hanishraj B Rao  
+## License
 
-    This program is free software; you can redistribute it and/or modify it under the terms 
-    of the GNU General Public License as published by the Free Software Foundation; either 
-    version 2 of the License, or (at your option) any later version:
-
-    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
-    See the GNU General Public License for more details  
-
+Distributed under the **GNU General Public License v2.0**.  
+Copyright (c) Hanishraj B Rao.
