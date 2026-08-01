@@ -223,7 +223,7 @@ import { ReadmeDialogComponent } from './readme-dialog.component';
 
               @if (repo.contributors?.length) {
                 <div class="contributors">
-                  @for (c of repo.contributors.slice(0, 5); track c.url) {
+                  @for (c of repo.contributors!.slice(0, 5); track c.url) {
                     <img
                       [src]="c.avatar"
                       [alt]="c.name"
